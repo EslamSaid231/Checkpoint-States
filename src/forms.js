@@ -1,10 +1,7 @@
-import BasicExample from "./App";
-
-let message = document.querySelector(".msg");
-
 function validateForm() {
-  let email = document.form["Form"]["email"].value;
-  let pass = document.form["Form"]["passw"].value;
+  let message = document.form["loginForm"]["msg"];
+  let email = document.form["loginForm"]["email"].value;
+  let pass = document.form["loginForm"]["pw"].value;
   if (email.length == 0) {
     message = "Please enter your email";
     return false;
