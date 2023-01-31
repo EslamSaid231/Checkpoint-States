@@ -1,34 +1,33 @@
-import PropTypes from "prop-types";
-import React from "react";
-
-//let pic = document.querySelector(".mypic");
-//let picenlarge = document.querySelector("Mypic2");
-//pic.addEventListener("click", function () {
-//  picenlarge.classList.add("Mypic2en");
-//});
+import React, { useState } from "react";
 
 const Profilepic = ({ photo }) => {
+  const [isActive, setIsActive] = useState(false);
+  const handleClickImg = () => {
+    setIsActive((current) => !current);
+  };
   return (
     <div>
       <img
-        className="mypic"
         src={photo}
         style={{
           width: "200px",
           height: "150px",
           borderRadius: "50%",
           border: " solid 2px black",
+          transition: isActive ? "0.5s all ease" : "0",
+          zIndex: isActive ? "999" : "0",
+          transform: isActive ? "scale(2.5)" : "scale(1)",
+          position: "relative",
+          left: isActive ? "100px" : "0",
+          top: isActive ? "100px" : "0",
         }}
         alt="myPic"
+        onClick={handleClickImg}
       />
     </div>
   );
 };
 export default Profilepic;
-
-Profilepic.propTypes = {
-  photo: PropTypes.string,
-};
 
 //function enlarge() {
 //  let img = document.querySelector({ photo });

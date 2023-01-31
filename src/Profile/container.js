@@ -9,8 +9,15 @@ import facebook from "./icon_facebook.png";
 import instagram from "./instagram.png";
 
 const Container = () => {
-  const handleClick = (fullname) => {
-    alert(`User name is : ` + fullname);
+  // const handleClick = (fullname) => {
+  //   alert(`User name is : ` + fullname);
+  // };
+  const handleClickimg = () => {
+    return (
+      <>
+        <img src={pic} />
+      </>
+    );
   };
 
   return (
@@ -29,16 +36,12 @@ const Container = () => {
       }}
     >
       <div>
-        <div
-          style={{ textAlign: "center" }}
-          onClick={enlarge}
-          className="mypic"
-        >
+        <div style={{ textAlign: "center" }} className="mypic">
           <Profilepic photo={pic} />
         </div>
         <div>
           <div style={{ marginTop: "20px" }}>
-            <Fullname fullname={"Eslam"} handleClick={handleClick} />
+            <Fullname fullname={"Eslam"} />
           </div>
           <div>
             <Address address={"Cairo, Egypt"} />
