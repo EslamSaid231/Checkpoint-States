@@ -7,15 +7,12 @@ import Bio from "./components/bio";
 import Links from "./components/links";
 import facebook from "./icon_facebook.png";
 import instagram from "./instagram.png";
-import { useState } from "react";
+
 const Container = () => {
   const handleClick = (fullname) => {
     alert(`User name is : ` + fullname);
   };
-  const enlarge = () => {
-    let img = document.querySelector(".mypic");
-    img.style.transform = "scale (1.5)";
-  };
+
   return (
     <div
       className="profile"
