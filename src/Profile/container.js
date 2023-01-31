@@ -12,7 +12,10 @@ const Container = () => {
   const handleClick = (fullname) => {
     alert(`User name is : ` + fullname);
   };
-  const [open, setOpen] = useState(false);
+  const enlarge = () => {
+    let img = document.querySelector(".mypic");
+    img.style.transform = "scale (1.5)";
+  };
   return (
     <div
       className="profile"
@@ -25,10 +28,15 @@ const Container = () => {
         width: "300px",
         border: "1px black solid",
         borderRadius: "5%",
+        marginLeft: "10px",
       }}
     >
       <div>
-        <div style={{ textAlign: "center" }}>
+        <div
+          style={{ textAlign: "center" }}
+          onClick={enlarge}
+          className="mypic"
+        >
           <Profilepic photo={pic} />
         </div>
         <div>

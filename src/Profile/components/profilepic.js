@@ -21,11 +21,6 @@ const Profilepic = ({ photo }) => {
         }}
         alt="myPic"
       />
-      <img
-        className="Mypic2"
-        src={photo}
-        style={{ display: "none", zIndex: "1" }}
-      />
     </div>
   );
 };
