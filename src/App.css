@@ -4,7 +4,7 @@
   background-image: transparent;
   width: 90%;
   height: 100%;
-  transition: 1s all ease-in;
+  transition: 0.5s all ease-in;
 }
 .photo {
   height: 150px;
@@ -15,7 +15,7 @@
   margin-top: 20%;
   padding: 15px 50px;
   background-color: transparent;
-  transition: 1s ease-out;
+  transition: 0.5s ease-out;
   display: inline;
   z-index: 3;
   border-radius: 10px;
