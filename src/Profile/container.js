@@ -71,6 +71,9 @@ const Container = () => {
             <Address address={"Cairo, Egypt"} />
           </div>
           <div style={{ marginTop: "20px" }}>
+            <p style={{ fontSize: "25px", fontWeight: "700" }}>About</p>
+            <hr />
+
             <Bio
               bio={
                 "My name is Eslam, 27 years old working as a Civil Engineer and looking forward to participate in Web Development career"
