@@ -6,7 +6,13 @@ const Profilepic = ({ photo }) => {
     setIsActive((current) => !current);
   };
   return (
-    <div>
+    <div
+      style={{
+        marginLeft: "auto",
+        justifyContent: "center",
+        margin: "15px 50px",
+      }}
+    >
       <img
         src={photo}
         style={{
@@ -14,6 +20,7 @@ const Profilepic = ({ photo }) => {
           height: "150px",
           borderRadius: "50%",
           border: " solid 2px black",
+          justifyContent: "center",
           transition: isActive ? "0.5s all ease" : "0",
           zIndex: isActive ? "999" : "0",
           transform: isActive ? "scale(2.5)" : "scale(1)",

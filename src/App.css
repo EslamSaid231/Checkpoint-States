@@ -1,8 +1,70 @@
 .App {
+  margin: 0 auto;
   text-align: center;
-  background-color: antiquewhite;
+  background-image: transparent;
+  width: 90%;
+  height: 100%;
+  transition: 1s all ease-in;
 }
 .photo {
   height: 150px;
   width: 200px;
+}
+
+.show-active {
+  margin-top: 20%;
+  padding: 15px 50px;
+  background-color: transparent;
+  transition: 1s ease-out;
+  display: inline;
+  z-index: 3;
+  border-radius: 10px;
+}
+.show-active:hover {
+  background-color: rgb(163, 18, 180);
+  transform: translateY(-15px);
+}
+.show-inactive {
+  transform: translateX(200px);
+  position: fixed;
+
+  z-index: 3;
+  visibility: hidden;
+  transition: 0.5s ease-out all;
+}
+.arrow {
+  position: relative;
+  left: 35px;
+}
+.arrow2 {
+  position: relative;
+  left: 35px;
+  transform: rotate(-90deg);
+  bottom: 2px;
+}
+.wrap-inactive {
+  transform: translateY(-150px);
+  position: relative;
+  opacity: 0;
+  top: 100px;
+  z-index: 999;
+  display: block;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.wrap-active {
+  margin-top: 2%;
+  padding: 15px 50px;
+  background-color: transparent;
+  transition: 1s ease-out;
+  display: inline;
+  border-radius: 10px;
+}
+.wrap-active:hover {
+  background-color: rgb(163, 18, 180);
+  transform: translateY(-15px);
+}
+.slider {
+  margin-left: 50px;
 }
