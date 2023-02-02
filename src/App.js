@@ -8,6 +8,8 @@ import Sidebar from "./Profile/components/sidebar";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
+  const [counter, setCounter] = useState(0);
+
   return (
     <div
       style={{
@@ -24,8 +26,17 @@ function App() {
           <img className="arrow" src={arrow} />
         </button>
         {isActive ? (
-          <div style={{ display: "flex" }}>
-            <Container />
+          <div>
+            <div style={{ display: "flex" }}>
+              <Container />
+            </div>
+            <p>
+              This component was mounted{" "}
+              {setInterval(() => {
+                setCounter((prevCounter) => prevCounter + 1);
+              }, 1000)}{" "}
+              milliseconds ago
+            </p>
           </div>
         ) : null}
         <button

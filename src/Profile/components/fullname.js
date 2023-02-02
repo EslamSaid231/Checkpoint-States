@@ -8,12 +8,7 @@ export const Fullname = ({ fullname }) => {
 
   return (
     <div style={{ width: "100%" }}>
-      <p
-        onMouseOver={alert("User name is : " + fullname)}
-        style={{ fontSize: "25px", marginBottom: "-3px" }}
-      >
-        {fullname}
-      </p>
+      <p style={{ fontSize: "25px", marginBottom: "-3px" }}>{fullname}</p>
     </div>
   );
 };
