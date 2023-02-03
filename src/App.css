@@ -6,6 +6,14 @@
     transform: translateY(0);
   }
 }
+@keyframes slidetobottom {
+  from {
+    transform: translateY(700%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 @keyframes slidetoright {
   from {
     transform: translateX(50%);
@@ -71,21 +79,21 @@
   bottom: 2px;
 }
 .wrap-inactive {
-  transform: translateY(-150px);
-  position: relative;
-  opacity: 0;
-  top: 100px;
-  z-index: 999;
   display: block;
   visibility: hidden;
-  transition: 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
+  margin: auto;
+  animation-name: slidetobottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
 }
 
 .wrap-active {
   margin-top: 2%;
   padding: 15px 50px;
   background-color: transparent;
-  transition: 0.5s ease-out;
+  transition: 0.5s all ease-out;
   display: inline;
   border-radius: 10px;
 }
