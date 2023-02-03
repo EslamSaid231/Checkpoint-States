@@ -27,7 +27,10 @@ function App() {
         </button>
         {isActive ? (
           <div>
-            <div style={{ display: "flex" }}>
+            <div
+              className={`components-${isActive ? "active" : "inactive"}`}
+              style={{ display: "flex" }}
+            >
               <Container />
             </div>
             <p>
