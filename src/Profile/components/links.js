@@ -17,7 +17,7 @@ const Links = ({ logo, logo2 }) => {
           <img
             alt="insta"
             src={logo2}
-            style={{ width: "15px", height: "17.5px", marginLeft: "10px" }}
+            style={{ width: "20px", height: "17.5px", marginLeft: "10px" }}
           />
         </a>
       </p>
